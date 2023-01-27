@@ -37,22 +37,23 @@ class Homepage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-            height: 200,
-            color: Color.fromARGB(255, 140, 216, 252),
-            width: double.infinity,
-            child: Column(
-              children: [
-                Expanded(child: Text("Hola")),
-                Expanded(
-                    child: ElevatedButton(
-                  style: TextButton.styleFrom(minimumSize: Size(10, 10)),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: Text("Go Back"),
-                ))
-              ],
-            )),
+          height: 200,
+          color: Color.fromARGB(255, 140, 216, 252),
+          width: double.infinity,
+          child: Column(
+            children: [
+              Expanded(child: Text("Hola")),
+              Expanded(
+                  child: ElevatedButton(
+                style: TextButton.styleFrom(minimumSize: Size(10, 10)),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text("Go Back"),
+              ))
+            ],
+          )
+        ),
       ),
     );
   }
