@@ -63,7 +63,11 @@ class _LoginState extends State<Login> {
                       height: 50,
                       width: clickedButton ? 50 : 150,
                       alignment: Alignment.center,
-                      decoration: BoxDecoration(color: Colors.deepPurple, borderRadius: BorderRadius.circular(clickedButton ? 25 : 10),),
+                      decoration: BoxDecoration(
+                        color: Colors.deepPurple, 
+                        //shape: clickedButton ? BoxShape.circle : BoxShape.rectangle,
+                        borderRadius: BorderRadius.circular(clickedButton ? 50 : 10),
+                      ),
                       child: clickedButton ? Icon(Icons.done, color: Colors.white,) : Text("Login", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),),
                     ),
                   )
