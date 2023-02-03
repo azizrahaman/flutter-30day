@@ -20,6 +20,8 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.poppins().fontFamily,
       ),
       darkTheme: ThemeData(brightness: Brightness.dark),
+      initialRoute: MyRoute.homeRoute,
+      debugShowCheckedModeBanner: false,
       routes: {
         "/": (context) => Login(), 
         MyRoute.homeRoute: (context) => Homepage(), 
