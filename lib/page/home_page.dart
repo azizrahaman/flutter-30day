@@ -9,8 +9,6 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String name = "Aziz";
-    int age = 20;
 
     return Scaffold(
       appBar: AppBar(
