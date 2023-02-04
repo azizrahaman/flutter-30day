@@ -72,7 +72,7 @@ class _LoginState extends State<Login> {
                       validator: (value) {
                         if (value!.isEmpty) {
                           return "Password can't be empty";
-                        } else if (value!.length < 6) {
+                        } else if (value.length < 6) {
                           return "Password minimum length is 6";
                         }
                         return null;
