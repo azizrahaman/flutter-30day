@@ -1,14 +1,5 @@
 class CatalogModel {
-  static final item = [
-    Item(
-      id: 1,
-      name: "iPhone 9",
-      desc: "An apple mobile which is nothing like apple",
-      price: 549,
-      brand: "Apple",
-      image: "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-    )
-  ];
+  static List<Item>? item;
 }
 
 class Item {
@@ -20,10 +11,31 @@ class Item {
   final String image;
 
   Item({
-    required this.id, 
-    required this.name, 
-    required this.desc, 
-    required this.price, 
-    required this.brand, 
-    required this.image});
+    required this.id,
+    required this.name,
+    required this.desc,
+    required this.price,
+    required this.brand,
+    required this.image,
+  });
+
+  factory Item.fromMap(Map<String, dynamic> map) {
+    return Item(
+      id: map['id'],
+      name: map['title'],
+      desc: map['description'],
+      price: map['price'],
+      brand: map['brand'],
+      image: map['thumbnail'],
+    );
+  }
+
+  toMap() => {
+    "id": id,
+    "name": name,
+    "desc": desc,
+    "price": price,
+    "brand": brand,
+    "image": image,
+  };
 }
